@@ -299,7 +299,8 @@ section::after {
 
 /* Title Slide */
 section.lead {
-    background: linear-gradient(135deg, var(--color-ing-orange) 0%, var(--color-deep-purple) 100%);
+    background: var(--color-ing-orange);
+    /*background: linear-gradient(135deg, var(--color-ing-orange) 0%, var(--color-deep-purple) 100%);*/
     color: var(--color-white);
     text-align: center;
     display: flex;
