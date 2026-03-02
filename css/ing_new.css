@@ -1,0 +1,500 @@
+/*
+ * ING Theme for Marp
+ * Based on ING Brand PowerPoint Template
+ * 
+ * Usage: Add `theme: ing_new` to your Markdown frontmatter
+ *
+ * Color Palette:
+ * - ING Orange: #FF6200 (Primary brand color)
+ * - Dark Gray: #101010 (Text)
+ * - Light Gray: #E8E8E8 (Backgrounds)
+ * - White: #FFFFFF
+ * - Accent Blue: #89D6FD
+ * - Accent Purple: #7724FF
+ * - Accent Pink: #D40199
+ * - Deep Purple: #4D0020
+ */
+
+/* ===========================
+   Theme Definition
+   =========================== */
+@import 'default';
+
+:root {
+    /* ING Brand Colors */
+    --color-ing-orange: #FF6200;
+    --color-dark: #101010;
+    --color-light-gray: #E8E8E8;
+    --color-white: #FFFFFF;
+    --color-accent-blue: #89D6FD;
+    --color-accent-purple: #7724FF;
+    --color-accent-pink: #D40199;
+    --color-deep-purple: #4D0020;
+    --color-link: #0D0D0D;
+    
+    /* Semantic Colors */
+    --color-background: var(--color-white);
+    --color-background-secondary: var(--color-light-gray);
+    --color-foreground: var(--color-dark);
+    --color-primary: var(--color-ing-orange);
+    --color-secondary: var(--color-accent-blue);
+    
+    /* Typography */
+    --font-family-heading: 'ING Display', 'Arial', 'Helvetica Neue', sans-serif;
+    --font-family-body: 'ING Me', 'Arial', 'Helvetica', sans-serif;
+    --font-family-code: 'SF Mono', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', monospace;
+    
+    /* Spacing */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+    
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+}
+
+/* ===========================
+   Section Styling
+   =========================== */
+section {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-family-body);
+    font-size: 28px;
+    line-height: 1.6;
+    padding: 60px 80px;
+    width: 1280px;
+    height: 720px;
+}
+
+/* ===========================
+   Typography
+   =========================== */
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-heading);
+    font-weight: 700;
+    color: var(--color-dark);
+    margin-bottom: var(--space-md);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 64px;
+    color: var(--color-ing-orange);
+    border-bottom: 4px solid var(--color-ing-orange);
+    padding-bottom: var(--space-sm);
+    margin-bottom: var(--space-lg);
+}
+
+h2 {
+    font-size: 48px;
+    color: var(--color-dark);
+}
+
+h3 {
+    font-size: 36px;
+}
+
+h4 {
+    font-size: 32px;
+}
+
+h5 {
+    font-size: 28px;
+}
+
+h6 {
+    font-size: 24px;
+}
+
+/* Body Text */
+p {
+    margin-bottom: var(--space-sm);
+}
+
+strong, b {
+    font-weight: 700;
+    color: var(--color-ing-orange);
+}
+
+em, i {
+    font-style: italic;
+    color: var(--color-dark);
+}
+
+/* Links */
+a {
+    color: var(--color-ing-orange);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom-color 0.2s ease;
+}
+
+a:hover {
+    border-bottom-color: var(--color-ing-orange);
+}
+
+/* ===========================
+   Lists
+   =========================== */
+ul, ol {
+    margin-left: var(--space-lg);
+    margin-bottom: var(--space-md);
+}
+
+ul li::marker {
+    color: var(--color-ing-orange);
+}
+
+ol li::marker {
+    color: var(--color-ing-orange);
+    font-weight: 700;
+}
+
+li {
+    margin-bottom: var(--space-xs);
+    padding-left: var(--space-sm);
+}
+
+li > ul,
+li > ol {
+    margin-top: var(--space-xs);
+}
+
+/* ===========================
+   Code Blocks
+   =========================== */
+code {
+    font-family: var(--font-family-code);
+    background-color: var(--color-light-gray);
+    color: var(--color-dark);
+    padding: 2px 6px;
+    border-radius: var(--radius-sm);
+    font-size: 0.85em;
+}
+
+pre {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    margin-bottom: var(--space-md);
+    overflow-x: auto;
+    line-height: 1.5;
+}
+
+pre code {
+    background-color: transparent;
+    color: var(--color-white);
+    padding: 0;
+    font-size: 22px;
+}
+
+/* ===========================
+   Tables
+   =========================== */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: var(--space-md);
+    font-size: 24px;
+}
+
+thead {
+    background-color: var(--color-ing-orange);
+    color: var(--color-white);
+}
+
+th {
+    font-family: var(--font-family-heading);
+    font-weight: 700;
+    text-align: left;
+    padding: var(--space-sm) var(--space-md);
+    border-bottom: 2px solid var(--color-dark);
+}
+
+td {
+    padding: var(--space-sm) var(--space-md);
+    border-bottom: 1px solid var(--color-light-gray);
+}
+
+tbody tr:hover {
+    background-color: rgba(255, 98, 0, 0.05);
+}
+
+/* ===========================
+   Blockquotes
+   =========================== */
+blockquote {
+    border-left: 6px solid var(--color-ing-orange);
+    background-color: var(--color-background-secondary);
+    padding: var(--space-md);
+    margin: var(--space-md) 0;
+    font-style: italic;
+    border-radius: var(--radius-sm);
+}
+
+blockquote p {
+    margin-bottom: 0;
+}
+
+/* ===========================
+   Images
+   =========================== */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius-md);
+    margin: var(--space-md) 0;
+}
+
+/* ===========================
+   Header & Footer
+   =========================== */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: var(--space-md) var(--space-xl);
+    background-color: var(--color-white);
+    border-bottom: 2px solid var(--color-ing-orange);
+    font-family: var(--font-family-heading);
+    font-size: 20px;
+    color: var(--color-dark);
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: var(--space-md) var(--space-xl);
+    background-color: var(--color-white);
+    border-top: 2px solid var(--color-light-gray);
+    font-size: 18px;
+    color: var(--color-dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Page number styling */
+section::after {
+    font-family: var(--font-family-body);
+    font-size: 18px;
+    color: var(--color-dark);
+}
+
+/* ===========================
+   Special Slide Classes
+   =========================== */
+
+/* Title Slide */
+section.lead {
+    background: linear-gradient(135deg, var(--color-ing-orange) 0%, var(--color-deep-purple) 100%);
+    color: var(--color-white);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--space-xl);
+}
+
+section.lead h1 {
+    color: var(--color-white);
+    border-bottom: 4px solid var(--color-white);
+    font-size: 72px;
+    margin-bottom: var(--space-lg);
+}
+
+section.lead h2 {
+    color: var(--color-white);
+    font-size: 42px;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+section.lead p {
+    color: var(--color-white);
+    font-size: 32px;
+    opacity: 0.9;
+}
+
+/* Inverted/Dark Slide */
+section.invert {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+}
+
+section.invert h1,
+section.invert h2,
+section.invert h3,
+section.invert h4,
+section.invert h5,
+section.invert h6 {
+    color: var(--color-white);
+}
+
+section.invert h1 {
+    border-bottom-color: var(--color-ing-orange);
+}
+
+section.invert a {
+    color: var(--color-accent-blue);
+}
+
+section.invert code {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-white);
+}
+
+/* Two-column layout */
+section.columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+}
+
+section.columns > * {
+    margin: 0;
+}
+
+/* ===========================
+   Utility Classes
+   =========================== */
+
+/* Text Alignment */
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+/* Color Utilities */
+.text-orange {
+    color: var(--color-ing-orange);
+}
+
+.text-blue {
+    color: var(--color-accent-blue);
+}
+
+.text-purple {
+    color: var(--color-accent-purple);
+}
+
+.text-pink {
+    color: var(--color-accent-pink);
+}
+
+.bg-orange {
+    background-color: var(--color-ing-orange);
+    color: var(--color-white);
+    padding: var(--space-sm);
+    border-radius: var(--radius-sm);
+}
+
+.bg-gray {
+    background-color: var(--color-light-gray);
+    padding: var(--space-sm);
+    border-radius: var(--radius-sm);
+}
+
+/* Highlight Box */
+.highlight {
+    background-color: rgba(255, 98, 0, 0.1);
+    border-left: 4px solid var(--color-ing-orange);
+    padding: var(--space-md);
+    margin: var(--space-md) 0;
+    border-radius: var(--radius-sm);
+}
+
+/* Warning/Info Boxes */
+.warning {
+    background-color: rgba(255, 98, 0, 0.1);
+    border-left: 4px solid var(--color-ing-orange);
+    padding: var(--space-md);
+    margin: var(--space-md) 0;
+    border-radius: var(--radius-sm);
+}
+
+.info {
+    background-color: rgba(137, 214, 253, 0.1);
+    border-left: 4px solid var(--color-accent-blue);
+    padding: var(--space-md);
+    margin: var(--space-md) 0;
+    border-radius: var(--radius-sm);
+}
+
+/* ===========================
+   Mermaid Diagram Styling
+   =========================== */
+.mermaid {
+    background-color: transparent;
+}
+
+.mermaid svg {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ===========================
+   Fragments/Animation
+   =========================== */
+section[data-marpit-fragment] {
+    opacity: 0.3;
+}
+
+section[data-marpit-fragment]:is([data-marpit-fragment-line]) {
+    opacity: 1;
+}
+
+/* ===========================
+   Print Styles
+   =========================== */
+@media print {
+    section {
+        page-break-after: always;
+        page-break-inside: avoid;
+    }
+    
+    header, footer {
+        position: fixed;
+    }
+}
+
+/* ===========================
+   Responsive Adjustments
+   =========================== */
+@media (max-width: 1024px) {
+    section {
+        padding: 40px 60px;
+        font-size: 24px;
+    }
+    
+    h1 {
+        font-size: 52px;
+    }
+    
+    h2 {
+        font-size: 40px;
+    }
+    
+    pre code {
+        font-size: 18px;
+    }
+}
